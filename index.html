@@ -13,11 +13,12 @@
 <body>
     <div id="root">
         <div class="min-h-screen">
+            <!---------------------------- Navbar ---------------->
             <nav class="top-navbar fixed top-0 w-full z-50">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between items-center h-16">
                         <div class="flex items-center">
-                            <div class="text-2xl font-bold text-gray-900" data-fontfamily='Playfair-Regular'> 
+                            <div class="text-2xl font-bold text-gray-900" data-fontfamily='Playfair-Regular'>
                                 <img src="assets/TMS-Black.webp" class="w-fit main-logo" alt="">
                             </div>
                         </div>
@@ -36,41 +37,63 @@
                     </div>
                 </div>
             </nav>
+            <!---------------------------- Navbar ---------------------->
 
 
 
 
+            <!---------------------------- Top Header ------------------>
             <section class="main-header pt-32 pb-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center">
+
+                <!-- Background Video -->
+                <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+                    <source src="assets/video-1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                
+
                 <div class="max-w-7xl mx-auto z-10">
                     <div class="text-center">
-                        <img src="assets/images/home-page/rotating.svg" alt="the-marketing-socials"
+                        <img src="assets/rotating-2.svg" alt="the-marketing-socials"
                             class="header-image mx-auto w-fit h-auto mb-4">
 
-                        <h1 class="text-5xl md:text-8xl font-light text-gray-900 mb-6"
+                        <h1 class="text-5xl md:text-8xl font-light text-graywhite mb-6"
                             data-fontfamily='Playfair-Regular'>Smart Strategies,<br>For The <span
-                                class="italic text-gray-900">Digital Age</span></h1>
-                        <p class="text-lxl md:text-2xl text-gray-900 max-w-3xl mx-auto mb-12 leading-relaxed">We start with a
+                                class="italic text-graywhite">Digital Age</span></h1>
+                        <p class="text-lxl md:text-2xl text-graywhite max-w-3xl mx-auto mb-12 leading-relaxed">We start
+                            with a
                             conversation. Diving deep into your vision, your challenges, and your goals. From there, we
                             move into exploration—gathering insights, sparking ideas, and sketching out the first
                             strokes of your brand's narrative.</p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                             
+                             <button data-slot="button" data-fontfamily='Gotham-Light'
+                                class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-bold transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30  h-10 rounded-md px-6 has-[&gt;svg]:px-4">Start Your Journey<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="lucide lucide-arrow-right ml-2 h-4 w-4" aria-hidden="true">
+                                    <path d="M5 12h14"></path>
+                                    <path d="m12 5 7 7-7 7"></path>
+                                </svg></button>    
                             <button data-slot="button" data-fontfamily='Gotham-Light'
-                                class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive shadow-xs h-10 rounded-md px-6 has-[&gt;svg]:px-4 bg-black text-white hover:bg-gray-800">Start
-                                Your Journey <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-bold transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none  aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 h-10 rounded-md px-6 has-[&gt;svg]:px-4">View
+                                Our Work <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
                                     class="lucide lucide-arrow-right ml-2 h-4 w-4" aria-hidden="true">
                                     <path d="M5 12h14"></path>
                                     <path d="m12 5 7 7-7 7"></path>
                                 </svg></button>
-                            <button data-slot="button" data-fontfamily='Gotham-Light'
-                                class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-10 rounded-md px-6 has-[&gt;svg]:px-4">View
-                                Our Work</button>
                         </div>
                     </div>
                 </div>
             </section>
+            <!---------------------------- Top Header ------------------>
 
+
+
+            <!---------------------------- Scroller Section ------------------>
             <section class="scroller-section mt-20 pb-5 pb-lg-3 zoom-in" style="overflow: hidden;">
                 <div class="marquee-inner" id="home-marqueeInner-1"
                     style="display: flex; flex-wrap: nowrap;  white-space: nowrap; will-change: transform;">
@@ -78,8 +101,9 @@
                         &bull;&nbsp</div>
                 </div>
             </section>
+            <!---------------------------- Scroller Section ------------------>
 
-
+            <!---------------------------- Contact Form ------------------>
             <section id="contact" class="py-20">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16">
@@ -135,8 +159,11 @@
                     </div>
                 </div>
             </section>
+            <!---------------------------- Contact Form ------------------>
 
 
+
+            <!---------------------------- Healping Brand ------------------>
             <section id="about" class="py-20 bg-black">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16">
@@ -277,6 +304,11 @@
                     </div>
                 </div>
             </section>
+            <!---------------------------- Healping Brand ------------------>
+
+
+
+            <!---------------------------- Services Success Section ------------------>
             <section id="services" class="py-20">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-16">
@@ -383,17 +415,29 @@
                     </div>
                 </div>
             </section>
+            <!---------------------------- Services Success Section ------------------>
+
+
+
+            <!---------------------------- Testimonials Section ------------------>
             <section id="clients" class="clients-section py-20 bg-gray-50">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Background Video -->
+                <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+                    <source src="assets/video-2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style="position: relative;z-index: 3;">
                     <div class="text-center mb-16">
-                        <h2 class="text-5xl font-light text-gray-900 mb-6" data-fontfamily='Playfair-Regular'>Your
-                            Brand,<br><span class="italic text-gray-900" data-fontfamily='Playfair-Regular'>Reimagined
+                        <h2 class="text-5xl font-light text-graywhite mb-6" data-fontfamily='Playfair-Regular'>Your
+                            Brand,<br><span class="italic text-graywhite" data-fontfamily='Playfair-Regular'>Reimagined
                                 for Impact</span></h2>
-                        <p class="text-xl text-gray-900 max-w-2xl mx-auto" data-fontfamily='Gotham-Light'>Depth.
+                        <p class="text-xl text-graywhite max-w-2xl mx-auto" data-fontfamily='Gotham-Light'>Depth.
                             Direction. Design.</p>
                     </div>
-                    <div
-                        class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
                         <div class="h-16 bg-cardlight rounded flex items-center justify-center"><span
                                 class="text-gray-900 font-semibold" data-fontfamily='Playfair-Regular'>Interior
                                 Design</span></div>
@@ -581,7 +625,10 @@
                     </div>
                 </div>
             </section>
+            <!---------------------------- Testimonials Section ------------------>
 
+
+            <!---------------------------- Footer Section ------------------>
             <footer class="bg-cream text-gray-900 py-12">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -618,6 +665,9 @@
                     </div>
                 </div>
             </footer>
+            <!---------------------------- Footer Section ------------------>
+
+
         </div>
     </div>
 

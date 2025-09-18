@@ -1964,7 +1964,9 @@
     .text-gray-900 {
         color: var(--color-gray-900)
     }
-
+    .text-graywhite{
+        color: #f1e8e0
+    }
     .text-muted-foreground {
         color: var(--muted-foreground)
     }

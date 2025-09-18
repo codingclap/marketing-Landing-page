@@ -1,0 +1,416 @@
+/* === Import Google Font === */
+@font-face {
+  font-family: 'Anton-Regular';
+  font-style: 300;
+  src: url(../fonts/Anton-Regular.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Gotham-Light';
+  font-style: 300;
+  src: url(../fonts/Gotham-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Gotham-Book';
+  font-style: 500;
+  src: url(../fonts/Gotham-Book.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  font-style: 500;
+  src: url(../fonts/Gotham-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Gotham-Bold';
+  font-style: 700;
+  src: url(../fonts/Gotham-Bold.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Gotham-thin';
+  font-style: 400;
+  src: url(../fonts/Gotham-Thin.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Gotham-XLight';
+  font-style: 400;
+  src: url(../fonts/Gotham-XLight.otf) format('opentype');
+}
+
+
+@font-face {
+  font-family: 'Playfair-Regular';
+  font-style: 400;
+  src: url(../fonts/playfair/PlayfairDisplay-Regular.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Playfair-Italic';
+  font-style: 400;
+  src: url(../fonts/playfair/PlayfairDisplay-Italic.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Playfair-Medium';
+  font-style: 700;
+  src: url(../fonts/playfair/PlayfairDisplay-Medium.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Playfair-Bold';
+  font-style: 700;
+  src: url(../fonts/playfair/PlayfairDisplay-Bold.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Anton-Regular';
+  font-style: 400;
+  src: url(../fonts/anton/Anton-Regular.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Cardo-Regular';
+  font-style: 400;
+  src: url(../fonts/cardo/Cardo-Regular.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Cardo-Italic';
+  font-style: 400;
+  src: url(../fonts/cardo/Cardo-Italic.ttf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Hevantica-Regular';
+  font-style: 400;
+  src: url(../fonts/Hevantica-Regular.ttf) format('opentype');
+}
+
+[data-weight='500'] {
+  font-weight: 500;
+}
+[data-fontfamily='Gotham-Light'] {
+  font-family: 'Gotham-Light', sans-serif;
+}
+
+[data-fontfamily='Gotham-Medium'] {
+  font-family: 'Gotham-Medium', sans-serif;
+}
+
+[data-fontfamily='Gotham-Bold'] {
+  font-family: 'Gotham-Bold', sans-serif;
+}
+
+[data-fontfamily='Playfair-Regular'] {
+  font-family: 'Playfair-Regular', sans-serif;
+}
+
+[data-fontfamily='Playfair-Italic'] {
+  font-family: 'Playfair-Italic', sans-serif;
+}
+
+[data-fontfamily='Gotham-Light'] {
+  font-family: 'Gotham-Light', sans-serif;
+}
+
+[data-fontfamily='Playfair-Medium'] {
+  font-family: 'Playfair-Medium', sans-serif;
+}
+
+[data-fontfamily='Playfair-Bold'] {
+  font-family: 'Playfair-Bold', sans-serif;
+}
+
+[data-fontfamily='Hevantica'] {
+  font-family: 'Hevantica-Regular';
+}
+
+
+
+/* === Root Variables for Colors and Fonts === */
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --color-brown: #322D2A;
+  --color-red: #6D2732;
+  --color-background-gray: #D9D9D9;
+  --color-text-dark-primary: #030404;
+  --color-text-dark-secondary: #322D2A;
+  --color-text-cream: #F1E8E0;
+  --color-muted: #322D2A;
+
+  --font-family-base: 'Gotham-Light', sans-serif;
+}
+
+/* === Reset / Base Styles === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+}
+.has-js .zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--color-background-gray);
+  color: var(--color-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Typography: Responsive Headings and Paragraph === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+  font-weight: 600;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: 500;
+}
+
+h6 {
+  font-size: clamp(0.875rem, 2vw, 1.25rem);
+  font-weight: 500;
+}
+
+p {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--color-text);
+}
+
+/* === Utilities (Optional) === */
+
+.navbg-light {
+  background-color: var(--color-background-gray);
+}
+
+.navbar-shadow{
+ box-shadow: 0 2px 24px rgb(0 0 0 / 20%);
+}
+
+#navbar-shadow-fixed{
+  transition: box-shadow 0.3s ease;
+  position: fixed;
+  top:0;
+  width: 100%;
+   transition: all 0.5s ease-in-out;
+}
+/**************** Footer Section ****************/
+.footer-section {
+  background-color: #F1E8E0;
+
+}
+
+.form-email-container {
+  position: relative;
+}
+
+.footer-section .footer-section-heading {
+  color: var(--color-brown);
+  font-family: 'Playfair-Regular';
+  font-size: clamp(2.8rem, 7vw, 10rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -3.2px;
+}
+
+.footer-section .footer-section-text {
+  color: var(--color-brown);
+  align-self: stretch;
+  font-family: 'Gotham-Light';
+  font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  /* 33.6px */
+}
+
+.footer-section a.btn-custom {
+  border-radius: 40px;
+  border: 2px solid rgba(50, 45, 42, 0.29);
+  padding: 7px 24px;
+  text-decoration: none;
+  color: var(--color-brown);
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: 'Gotham-Light';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 20.8px */
+  letter-spacing: -0.32px;
+}
+
+.footer-section .footer-email-heading {
+  position: absolute;
+  transform: rotate(8.032deg);
+  flex-shrink: 0;
+  top: 60px;
+  padding: 50px 70px;
+  border-radius: 80%;
+  border: 2px solid var(--color-brown);
+  color: var(--color-brown);
+  font-family: 'Playfair-Regular';
+  font-size: clamp(1rem, 2vw, 2em);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  /* 35.2px */
+  letter-spacing: -0.64px;
+  text-wrap: wrap;
+}
+
+.form-content-fields {
+  padding-top: 20em;
+}
+
+/**************** Form Fields ****************/
+
+.form-content-fields .form-control {
+  border: none;
+  border-bottom: 1px solid #322D2A;
+  border-radius: 0;
+  padding: 0.8rem 0rem;
+  background: transparent;
+  box-shadow: none;
+}
+
+.form-content-fields .form-control:focus {
+  border-color: #322D2A;
+  box-shadow: none;
+}
+
+.form-content-fields .btn-outline-dark {
+  font-weight: 500;
+  border-radius: 35px;
+  border: 2px solid var(--color-brown);
+  display: flex;
+  padding: 12px 30px;
+  align-items: center;
+  gap: 15px;
+  color: var(--color-brown);
+  font-family: 'Gotham-Medium';
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  /* 20.8px */
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+}
+
+::placeholder {
+  color: var(--color-brown);
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: 'Gotham-Light';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  /* 20.8px */
+  letter-spacing: -0.32px;
+}
+
+.form-content-fields .intl-group select {
+  width: 100px;
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.extra-padding {
+  padding: 0 80px;
+}
+
+@media screen and (max-width: 1024px) {
+  .extra-padding {
+    padding: 0 40px;
+  }
+  .footer-section .footer-email-heading { 
+    padding: 40px 50px;
+  }
+}
+
+@media screen and (max-width:991px) {
+  .footer-section .footer-email-heading {
+    top: 0;
+    padding: 30px 50px;
+  }
+
+  .form-content-fields {
+    padding-top: 10em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .extra-padding {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .footer-section .footer-email-heading {
+    padding: 30px 50px;
+    font-size: clamp(0.9rem, 2vw, 2em);
+  }
+
+  .form-content-fields {
+    padding-top: 5em;
+  }
+}
+
+@media screen and (max-width: 416px) {
+  .extra-padding {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .footer-section .footer-email-heading {
+    padding: 28px 50px;
+    font-size: clamp(0.8rem, 2vw, 2em);
+  }
+}
+
+/**************** Footer Section ****************/

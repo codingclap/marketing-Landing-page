@@ -1,0 +1,876 @@
+/****************** Main Header ****************/
+.project-header {
+     background-color: #D9D9D9;
+     padding-top: 10em;
+     position: relative;
+     bottom: -1px;
+}
+
+.project-header .header-title {
+     color: var(--color-muted);
+     font-size: clamp(1.3rem, 2vw, 2.4rem);
+}
+
+
+.project-header .header-image {
+     width: 100%;
+     max-width: 200px;
+}
+
+
+@media (max-width: 768px) {
+     .project-header .header-image {
+          width: 100%;
+          max-width: 180px;
+     }
+}
+
+@media (max-width: 500px) {
+     .project-header .header-image {
+          width: 100%;
+          max-width: 130px;
+     }
+}
+
+/****************** Main Header ****************/
+
+/****************** Scroller Section ****************/
+.scroller-section {
+     width: 100%;
+     overflow: hidden;
+     min-height: 100px;
+     display: flex;
+     align-items: center;
+}
+
+.marquee-inner {
+     display: flex;
+     white-space: nowrap;
+}
+
+.marquee-text {
+     font-size: 400px;
+     font-family: 'Anton-Regular', sans-serif;
+     color: #E3E3E3;
+     font-weight: 400;
+     white-space: nowrap;
+     line-height: 130%;
+}
+
+@media screen and (max-width: 991px) {
+     .marquee-text {
+          font-size: 350px;
+     }
+}
+
+@media screen and (max-width: 767px) {
+     .marquee-text {
+          font-size: 300px;
+     }
+}
+
+@media screen and (max-width: 479px) {
+     .marquee-text {
+          font-size: 260px;
+     }
+}
+
+/****************** Scroller Section ****************/
+
+/****************** Project - Section ****************/
+.project-section {
+     position: relative;
+     width: 100%;
+}
+
+.project-section .down-arrow {
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 120px;
+     height: 120px;
+     background-color: #6d2732;
+     border-radius: 50%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     z-index: +2;
+}
+
+.project-section .down-arrow .down-arrow-img {
+     width: 35px;
+     transform: scale(0.90) rotate(0deg);
+     transition: transform 0.4s cubic-bezier(0.32, 1.5, 0.36, 1.4);
+     /* "Break" effect */
+}
+
+.project-section .down-arrow:hover .down-arrow-img {
+     transform: scale(1.1) rotate(35deg);
+}
+
+
+.project-section .down-arrow:hover .down-arrow-img {
+     transform: scale(1.1) rotate(35deg);
+}
+
+
+.project-section .mobile-link-arrow {
+     width: 130px;
+     height: 40px;
+     background-color: #020202;
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     margin: 0 auto;
+     display: none;
+}
+.project-section .mobile-link-arrow a{
+     line-height: 40px;
+     color: #fff;
+     font-size: 12px;
+     letter-spacing: 1px;
+}
+.project-section .mobile-link-arrow .mobile-link{
+     text-decoration: none;
+} 
+.project-section .mobile-link-arrow .mobile-link-arrow-img {
+     width: 16px;
+     transform: rotate(270deg);
+}
+
+
+.project-section .project-main-holder {
+     width: 100vw;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 0;
+     /* or your desired gap */
+}
+
+.project-section .project-holder .project-profile-box {
+     height: 100%;
+     width: 100%;
+     cursor: pointer;
+}
+
+.project-section .project-holder .project-profile {
+     flex: 1 1 100%;
+     position: relative;
+     overflow: hidden;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: #000;
+     /* Optional: background color for the profile */
+     transition: all 0.4s ease-in-out;
+}
+
+.project-section .project-holder .project-profile::before {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     content: "";
+     background-color: #00000030;
+     z-index: 0;
+     transition: all 0.4s ease-in-out;
+}
+
+.project-section .project-holder .project-mobile-description {
+     color: #fff;
+     transition: all 0.4s ease-in-out;
+}
+
+
+.project-section .project-holder .project-profile img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     /* Ensures full image is visible, no cropping */
+     display: block;
+     background: #000;
+     /* Optional: for letterboxing */
+}
+
+.project-section .project-profile .project-title {
+     height: 100%;
+     flex-direction: column;
+     display: flex;
+     justify-content: space-around;
+     padding: 7em 6em;
+     position: absolute;
+     color: #fff;
+     font-family: 'Playfair-Regular';
+     width: 100%;
+     transition: all 0.4s ease-in-out;
+}
+
+
+
+.project-section .project-profile .project-hover-description {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     opacity: 0;
+     z-index: -1;
+     transition: all 0.4s ease-in-out;
+}
+
+.project-section .project-profile .project-hover-description p {
+     color: #000;
+     text-align: center;
+     font-family: 'Gotham-Book';
+     font-size: clamp(1.2rem, 3vw, 1.5rem);
+     font-style: normal;
+     font-weight: 400;
+     line-height: 140%;
+     /* 44.8px */
+     letter-spacing: -0.96px;
+     max-width: 900px;
+     mix-blend-mode: hard-light;
+}
+
+
+
+.project-section .project-profile .project-hover-description p.special-font {
+     font-family: 'Hevantica-Regular';
+     font-size: clamp(1.2rem, 3vw, 2rem);
+     color: #000;
+     text-align: center;
+     -webkit-text-stroke-width: 0.5px;
+     -webkit-text-stroke-color: #000;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 140%;
+     /* 50.4px */
+     letter-spacing: 2.16px;
+}
+
+.project-section .project-profile .project-hover-description:before {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     content: "";
+     opacity: 0;
+     transition: all 0.4s ease-in-out;
+}
+
+.project-section .project-profile .project-text {
+     position: absolute;
+     z-index: 1;
+     opacity: 0;
+     transition: all 0.4s ease-in-out;
+}
+
+
+.project-section .project-holder .project-profile:hover .project-hover-description {
+     opacity: 0.9;
+     transition: all 0.4s ease-in-out;
+     z-index: 1;
+}
+
+.project-section .project-holder .project-profile:hover .project-hover-description:before {
+
+     opacity: 0.99;
+     transition: all 0.4s ease-in-out;
+     backdrop-filter: blur(2px);
+}
+
+.project-section .project-holder .project-profile.first-bg:hover .project-hover-description:before {
+     background-color: #AA9D8E;
+}
+
+.project-section .project-holder .project-profile.second-bg:hover .project-hover-description:before {
+     background-color: #D1C7BC;
+}
+
+.project-section .project-holder .project-profile.third-bg:hover .project-hover-description:before {
+     background-color: #6D2732;
+}
+
+.project-section .project-profile.third-bg:hover p,
+.project-section .project-profile.third-bg:hover p.special-font {
+     color: #fff;
+     -webkit-text-stroke-color: #ffffff;
+}
+
+.project-section .project-holder .project-profile.fourth-bg:hover .project-hover-description:before {
+     background-color: #F1E8E0;
+}
+
+.project-section .project-holder .project-profile.fifth-bg:hover .project-hover-description:before {
+     background-color: #D9D9D9;
+}
+
+.project-section .project-holder .project-profile:hover .project-text {
+     opacity: 0.9;
+     transition: all 0.4s ease-in-out;
+}
+
+.project-section .project-profile .project-title .title-top {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+.title-head-mobile {
+     font-size: clamp(2rem, 4vw, 5rem);
+     font-family: 'Playfair-Display';
+     display: none;
+}
+
+.verticle-bar {
+     display: none;
+}
+
+.project-section .project-profile .project-title .title-top .title-head {
+     font-size: clamp(2rem, 4.5vw, 5rem);
+     font-family: 'Playfair-Display';
+     font-weight: 400;
+}
+
+.project-section .project-profile .project-title .title-top .title-para {
+     font-size: clamp(1rem, 3vw, 2.6rem);
+     font-family: 'Playfair-Regular';
+     font-weight: 400;
+     letter-spacing: 3px;
+}
+
+.project-section .project-profile .project-title .title-top .top-tags {
+     display: flex;
+     flex-direction: column;
+     font-size: 13px;
+     font-family: 'Gotham-Book';
+     width: 250px;
+}
+
+.project-section .project-profile .project-title .title-bottom {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+}
+
+.project-section .project-profile .project-title .title-bottom .title-head {
+     font-size: clamp(2rem, 4vw, 5rem);
+     font-family: 'Gotham-Book';
+}
+
+.project-section .project-profile .project-title .title-bottom .bottom-tags {
+     display: flex;
+     flex-direction: column;
+     font-size: 13px;
+     font-family: 'Gotham-Book';
+     width: 250px;
+}
+
+.project-section .project-holder .project-mobile-description {
+     display: none;
+}
+
+/* Responsive adjustments */
+
+
+@media screen and (max-width: 1300px) {
+     .project-section .project-holder .project-profile {
+          flex: 1 1 100%;
+          height: 700px;
+     }
+
+     .project-section .down-arrow {
+          width: 90px;
+          height: 90px;
+     }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+     .project-section .project-profile .project-title {
+          padding: 2em 2em;
+          justify-content: space-evenly;
+     }
+
+     .project-section .project-profile .project-title .title-top .top-tags {
+          font-size: 13px;
+     }
+
+     .project-section .project-profile .project-title .title-bottom .bottom-tags {
+          font-size: 13px;
+     }
+
+     .project-section .project-holder .project-profile {
+          height: 600px;
+     }
+
+     .project-section .down-arrow .down-arrow-img {
+          width: 30px;
+     }
+}
+
+@media screen and (max-width: 991px) {
+     .project-section .mobile-link-arrow {
+          display: flex;
+     }
+
+     .project-section .project-holder .project-mobile-description {
+          display: flex;
+     }
+
+     .project-section .project-holder .project-mobile-description p {
+          text-align: center;
+          font-family: 'Gotham-Book';
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 140%;
+          /* 44.8px */
+          max-width: 900px;
+     }
+
+     .project-section .project-holder .project-mobile-description p.special-font {
+          font-family: 'Hevantica-Regular';
+          font-size: 16px;
+          color: #000;
+          text-align: center;
+          -webkit-text-stroke-width: 0.6px;
+          -webkit-text-stroke-color: #000;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          /* 50.4px */
+          letter-spacing: 2.16px;
+     }
+
+     .project-section .project-profile .project-hover-description {
+          display: none;
+     }
+
+     .project-section .project-holder .project-mobile-description.first-bg {
+          opacity: 0.95;
+          background: #AA9D8E;
+     }
+
+     .project-section .project-holder .project-mobile-description.second-bg {
+          opacity: 0.9;
+          background: #D1C7BC;
+     }
+
+     .project-section .project-holder .project-mobile-description.third-bg {
+          opacity: 0.9;
+          background: #6D2732;
+     }
+
+     .project-section .project-holder .project-mobile-description.fourth-bg {
+          opacity: 0.9;
+          background: #F1E8E0;
+     }
+
+     .project-section .project-holder .project-mobile-description.fifth-bg {
+          opacity: 0.9;
+          background: #D9D9D9;
+     }
+
+     .project-section .project-holder .project-mobile-description.first-bg,
+     .project-section .project-holder .project-mobile-description.second-bg,
+     .project-section .project-holder .project-mobile-description.fifth-bg,
+     .project-section .project-holder .project-mobile-description.fourth-bg {
+          color: #000;
+     }
+
+     .project-section .project-holder .project-mobile-description.third-bg p {
+          color: #fff;
+     }
+
+     .project-section .project-holder .project-mobile-description.third-bg p.special-font {
+          color: #fff;
+          -webkit-text-stroke-width: 0.6px;
+          -webkit-text-stroke-color: #ffffff;
+     }
+
+
+
+}
+
+@media (max-width: 767px) {
+     .project-section .project-holder .project-profile {
+          height: 450px;
+     }
+
+     .project-section .down-arrow .down-arrow-img {
+          width: 25px;
+     }
+}
+
+@media screen and (max-width: 425px) {
+     .verticle-bar {
+          display: inline-block;
+     }
+
+     br {
+          display: none;
+     }
+
+     .title-head-mobile {
+          display: block;
+     }
+
+     .project-section .project-profile .project-title {
+          justify-content: space-evenly;
+     }
+
+     .project-section .project-profile .project-title .title-bottom {
+          padding-top: 10px;
+     }
+
+     .project-section .project-profile .project-title .title-bottom .title-head {
+          display: none;
+     }
+
+     .project-section .project-profile .project-title .title-top {
+          align-items: self-start;
+          flex-direction: column;
+          gap: 20px;
+     }
+
+     .project-section .project-profile .project-title .title-top .top-tags {
+          font-size: 10px;
+          width: 100%;
+     }
+
+     .project-section .project-profile .project-title .title-bottom .bottom-tags {
+          font-size: 10px;
+          width: 100%;
+     }
+
+     .project-section .project-holder .project-profile {
+          height: 400px;
+     }
+
+     .project-section .down-arrow {
+          width: 55px;
+          height: 55px;
+     }
+
+     .project-section .down-arrow .down-arrow-img {
+          width: 16px;
+     }
+
+}
+
+@media screen and (max-width: 375px) {
+     .project-section .project-profile .project-title {
+          padding: 1em 1em;
+     }
+}
+
+/****************** Project - Section ****************/
+
+
+/****************** Scroller Footer ****************/
+.scroller-gif-section {
+     width: 100%;
+     overflow: hidden;
+     min-height: 100px;
+     display: flex;
+     align-items: center;
+     padding-top: 5em;
+}
+
+.marquee-inner-2 {
+     display: flex;
+     white-space: nowrap;
+}
+
+.marquee-text-2 {
+     font-size: 200px;
+     font-family: 'Cardo-Italic';
+     color: #322D2A;
+     font-weight: 400;
+     white-space: nowrap;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     line-height: 135%;
+}
+
+.marquee-img-1 {
+     width: 160px;
+}
+
+.marquee-img-2 {
+     width: 160px;
+}
+
+.marquee-img-3 {
+     width: 160px;
+}
+
+@media screen and (max-width: 991px) {
+     .marquee-text-2 {
+          font-size: 150px;
+     }
+
+     .marquee-img-1 {
+          width: 110px;
+     }
+
+     .marquee-img-2 {
+          width: 110px;
+     }
+
+     .marquee-img-3 {
+          width: 110px;
+     }
+}
+
+@media screen and (max-width: 767px) {
+     .marquee-text-2 {
+          font-size: 100px;
+     }
+}
+
+@media screen and (max-width: 479px) {
+     .marquee-text-2 {
+          font-size: 80px;
+     }
+
+     .scroller-gif-section {
+          padding-top: 2em;
+     }
+
+     .marquee-img-1 {
+          width: 90px;
+     }
+
+     .marquee-img-2 {
+          width: 90px;
+     }
+
+     .marquee-img-3 {
+          width: 90px;
+     }
+}
+
+
+/****************** Scroller Footer ****************/
+
+
+/****************** Socials Share Section ****************/
+.socials-share-section .socials-share-title {
+     color: #322D2A;
+     text-align: center;
+     font-family: 'Playfair-Regular';
+     font-size: clamp(2.3rem, 4vw, 3.5rem);
+     font-style: normal;
+     font-weight: 500;
+     line-height: 120%;
+     /* 67.2px */
+     letter-spacing: -1.12px;
+}
+
+.socials-follow-container {
+     border-bottom: 2px solid #322D2A;
+}
+
+.socials-follow-container .follow-pics-text {
+     color: #322D2A;
+     text-align: center;
+     font-family: 'Playfair-Regular';
+     font-size: clamp(1.1rem, 3vw, 1.6rem);
+     font-style: normal;
+     font-weight: 500;
+     line-height: 120%;
+     /* 38.4px */
+     letter-spacing: -0.64px;
+     text-transform: lowercase;
+}
+
+.socials-follow-container .follow-pics img {
+     width: 50px;
+}
+
+.socials-follow-container .follow-btn {
+     border: 1px solid #C4C4C4;
+     border-radius: 50px;
+     padding: 4px 14px;
+}
+
+.socials-follow-container .follow-btn .btn-follow {
+     color: #322D2A;
+     font-family: 'Gotham-Light';
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 85%;
+     /* 22.4px */
+     letter-spacing: -0.32px;
+}
+
+@media screen and (max-width: 500px) {
+     .socials-follow-container .follow-btn {
+          padding: 1px 10px;
+     }
+
+     .socials-follow-container .follow-btn .btn-follow {
+          font-size: 14px;
+          line-height: 120%;
+     }
+
+     .socials-follow-container .follow-pics img {
+          width: 40px;
+     }
+
+     .socials-follow-container .follow-pics-text {
+          font-size: clamp(1rem, 3vw, 1.6rem);
+     }
+
+     .socials-follow-container .follow-btn {
+          border-radius: 50px;
+          padding: 1px 10px;
+     }
+}
+
+@media screen and (max-width: 375px) {
+     .socials-follow-container .follow-pics-text {
+          font-size: clamp(0.9rem, 3vw, 1.6rem);
+     }
+
+     .socials-follow-container .follow-btn {
+          border-radius: 50px;
+          padding: 1px 6px;
+     }
+
+     .socials-follow-container .follow-btn .btn-follow {
+          font-size: 13px;
+     }
+}
+
+
+/****************** Socials Share Section ****************/
+
+
+/****************** Brand Reimaging Section ****************/
+
+.brand-reimaging-section {
+     width: 100%;
+     min-height: 900px;
+     background-color: #680B16;
+     position: relative;
+     padding-left: 0;
+     padding-right: 0;
+     color: #fff;
+     display: flex;
+     align-items: center;
+}
+
+.brand-reimaging-section .brand-reimaging-heading {
+     position: absolute;
+     top: 25%;
+     right: 70%;
+     z-index: 1;
+}
+
+.brand-reimaging-section .brand-reimaging-heading .brand-heading {
+     font-size: 20px;
+     font-family: 'Gotham-Light';
+     font-style: normal;
+     font-weight: 400;
+     line-height: 140%;
+     color: #F1E8E0;
+     /* 28px */
+     letter-spacing: -0.4px;
+     text-transform: uppercase;
+}
+
+.brand-reimaging-section .brand-reimaging-image {
+     position: absolute;
+     right: 0;
+     bottom: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 3;
+     background: url('../images/home-page/black-lady.png') center bottom no-repeat;
+     height: 900px;
+}
+
+
+.brand-reimaging-section .brand-reimaging-bgtext .brand-bgheading {
+     font-size: 400px;
+     color: #5E0A14;
+     font-family: 'Anton-Regular';
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     text-transform: uppercase;
+}
+
+.brand-reimaging-section .brand-reimaging-bgtext {
+     display: flex;
+     white-space: nowrap;
+}
+
+.brand-reimaging-section .brand-reimaging-animation {
+     width: 100%;
+     overflow: hidden;
+     min-height: 100px;
+     display: flex;
+     align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+     .brand-reimaging-section .brand-reimaging-bgtext .brand-bgheading {
+          font-size: 350px;
+     }
+}
+
+@media screen and (max-width: 767px) {
+     .brand-reimaging-section .brand-reimaging-bgtext .brand-bgheading {
+          font-size: 300px;
+     }
+}
+
+@media screen and (max-width: 479px) {
+     .brand-reimaging-section .brand-reimaging-bgtext .brand-bgheading {
+          font-size: 260px;
+     }
+}
+
+@media screen and (max-width: 768px) {
+     .brand-reimaging-section {
+          min-height: 500px;
+     }
+
+     .brand-reimaging-section .brand-reimaging-image {
+          background: url('../images/home-page/black-lady.png') center bottom/200px no-repeat;
+     }
+
+     .brand-reimaging-section .brand-reimaging-heading .brand-heading {
+          font-size: 16px;
+     }
+
+     .brand-reimaging-section .brand-reimaging-heading {
+          left: 15px;
+     }
+
+
+}
+
+@media screen and (max-width: 500px) {
+     .brand-reimaging-section .brand-reimaging-heading {
+          left: 15px;
+          top: 6%;
+          width: 50%;
+     }
+}
+
+
+/****************** Brand Reimaging Section ****************/

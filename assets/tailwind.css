@@ -1566,7 +1566,7 @@
     }
 
     .bg-gray-300 {
-        background-color: var(--color-gray-300)
+        background-color: oklch(0.83 0.02 70.11);
     }
 
     .bg-muted,
@@ -2003,7 +2003,7 @@
     }
 
     .text-yellow-400 {
-        color: var(--color-yellow-400)
+        color: oklch(0.3 0.01 0);
     }
 
     .italic {

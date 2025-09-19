@@ -1,3 +1,7 @@
+body {
+    smooth-scroll: smooth;
+}
+
 /* === Import Google Font === */
 @font-face {
     font-family: 'Anton-Regular';
@@ -130,6 +134,12 @@
     font-family: 'Hevantica-Regular';
 }
 
+a{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
 h1,
 h2,
 h3,
@@ -172,9 +182,11 @@ img.footer-logo {
     background-color: var(--color-cream); */
 
 }
-.main-header video{
+
+.main-header video {
     object-fit: cover;
 }
+
 .main-header::before {
     content: "";
     position: absolute;
@@ -247,12 +259,14 @@ img.footer-logo {
     background-position: top center;
     text-align: center;
     background-color: var(--color-cream);*/
-    z-index: 0; 
+    z-index: 0;
 }
-.clients-section video{
+
+.clients-section video {
     object-fit: cover;
     z-index: -1;
 }
+
 .clients-section::before {
     content: "";
     position: absolute;

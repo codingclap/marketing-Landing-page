@@ -14,6 +14,11 @@
 </head>
 
 <body>
+    <style>
+        body{
+            smooth-scroll: smooth;
+        }
+    </style>
     <div id="root">
         <div class="min-h-screen">
             <!---------------------------- Navbar ---------------->
@@ -75,7 +80,7 @@
                         <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up"
                             data-aos-duration="1800" data-aos-delay="700">
 
-                            <button data-slot="button" data-fontfamily='Gotham-Light'
+                            <a href="#contact-form"><button data-slot="button" data-fontfamily='Gotham-Light'
                                 class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-bold transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30  h-10 rounded-md px-6 has-[&gt;svg]:px-4">Start
                                 Your Journey<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -83,8 +88,8 @@
                                     class="lucide lucide-arrow-right ml-2 h-4 w-4" aria-hidden="true">
                                     <path d="M5 12h14"></path>
                                     <path d="m12 5 7 7-7 7"></path>
-                                </svg></button>
-                            <button data-slot="button" data-fontfamily='Gotham-Light'
+                                </svg></button></a>
+                            <a href="https://themarketingsocials.com/projects/"><button data-slot="button" data-fontfamily='Gotham-Light'
                                 class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-bold transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none  aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 h-10 rounded-md px-6 has-[&gt;svg]:px-4">View
                                 Our Work <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -92,7 +97,7 @@
                                     class="lucide lucide-arrow-right ml-2 h-4 w-4" aria-hidden="true">
                                     <path d="M5 12h14"></path>
                                     <path d="m12 5 7 7-7 7"></path>
-                                </svg></button>
+                                </svg></button></a>
                         </div>
                     </div>
                 </div>
@@ -102,7 +107,7 @@
 
 
             <!---------------------------- Scroller Section ------------------>
-            <section class="scroller-section mt-20 pb-5 pb-lg-3" data-aos="zoom-in" data-aos-duration="1800"
+            <section id="contact-form" class="scroller-section mt-20 pb-5 pb-lg-3" data-aos="zoom-in" data-aos-duration="1800"
                 data-aos-delay="100" style="overflow: hidden;">
                 <div class="marquee-inner" id="home-marqueeInner-1"
                     style="display: flex; flex-wrap: nowrap;  white-space: nowrap; will-change: transform;">
